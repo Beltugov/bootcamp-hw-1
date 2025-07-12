@@ -1,0 +1,32 @@
+services:
+  app:
+    container_name: nest_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/dogdb
+    depends_on:
+      - db
+    command: npm run start:dev
+
+  db:
+    container_name: postgres_db
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=dogdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
