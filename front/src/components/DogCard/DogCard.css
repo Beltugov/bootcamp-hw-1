@@ -1,0 +1,22 @@
+.dog-list__dog {
+    position: relative;
+}
+
+.dog-list__dog:hover {
+    .dog-list__dog-img {
+        scale: 1.12;
+        transition: 0.4s;
+        box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.24), 0 9px 18px 0 rgba(0, 0, 0, 0.18);
+    }
+}
+
+.dog-list__like-btn {
+    position: absolute;
+    display: flex;
+    color: white;
+    right: 0;
+    bottom: 0;
+    height: 28px;
+    justify-content: space-between;
+    width: 100%;
+}

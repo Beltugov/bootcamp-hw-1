@@ -1,0 +1,27 @@
+.header {
+    background-color: #2196F3;
+    height: 64px;
+    padding: 0 62px;
+    display: flex;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.link-btn {
+    color: rgba(255, 255, 255, 0.7);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    line-height: 21px;
+}
+
+.link-btn:hover {
+    background-color: #1E88E5;
+    opacity: 0.7;
+}
+
+.selected {
+    background-color: #1E88E5;
+    color: rgba(255, 255, 255, 1)
+}
